@@ -2,7 +2,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            CurrentImg:0,
+            currentImg:0,
             slides : [
                 {
                     image: 'img/01.webp',
@@ -30,15 +30,15 @@ createApp({
     },
     methods:{
         NextImg(){
-            this.CurrentImg++;
-            if ( this.CurrentImg > this.slides.length - 1){
-                this.CurrentImg = 0;
+            this.currentImg++;
+            if ( this.currentImg > this.slides.length - 1){
+                this.currentImg = 0;
             }
         },
         PrevImg(){
-            this.CurrentImg--;
-            if ( this.CurrentImg < 0){
-                this.CurrentImg = this.slides.length -1;
+            this.currentImg--;
+            if ( this.currentImg < 0){
+                this.currentImg = this.slides.length -1;
             }
         }
     }
